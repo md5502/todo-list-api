@@ -8,7 +8,12 @@ from common.models import BaseModel
 
 class UserManager(BUM):
     def create_user(
-        self, username, email, is_active=True, is_admin=False, password=None
+        self,
+        username,
+        email,
+        is_active=True,
+        is_admin=False,
+        password=None,
     ):
         if not username:
             raise ValueError("user must have username")
@@ -48,7 +53,11 @@ class UserManager(BUM):
 
 class BaseUser(BaseModel, AbstractBaseUser, PermissionsMixin):
     username_validator = UnicodeUsernameValidator()
-    username = models.CharField(max_length=100,unique=True, validators=[username_validator])
+    username = models.CharField(
+        max_length=100,
+        unique=True,
+        validators=[username_validator],
+    )
     email = models.EmailField()
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)

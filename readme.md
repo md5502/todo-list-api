@@ -21,8 +21,8 @@ This is a Django-based task management application with features including task 
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/md5502/your-repository.git
-    cd your-repository
+    git clone https://github.com/md5502/todo-list-api.git
+    cd todo-list-api
     ```
 
 2. **Create and activate a virtual environment:**
@@ -63,13 +63,13 @@ To run the application using Docker, use the following commands:
 1. **Build and start the containers:**
 
     ```sh
-    docker-compose -f docker-compose.yml up --build
+    docker-compose -f docker-compose.yml up --d
     ```
 
 2. **For development, use:**
 
     ```sh
-    docker-compose -f docker-compose.dev.yml up --build
+    docker-compose -f docker-compose.dev.yml up --d
     ```
 
 ## API Documentation
@@ -131,10 +131,6 @@ To run the application using Docker, use the following commands:
     ```
 
 5. **Create a pull request**
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 

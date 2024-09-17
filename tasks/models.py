@@ -35,6 +35,8 @@ class Task(BaseModel):
 
 class Tag(models.Model):
     name = models.CharField(max_length=50, unique=True)
+    created_by = models.ForeignKey(BaseUser,null=True, blank=True, on_delete=models.CASCADE, related_name="tags")
+
 
     def __str__(self):
         return self.name
